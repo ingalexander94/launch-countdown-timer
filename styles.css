@@ -151,7 +151,25 @@ body {
   background-image: url("./images/icon-instagram.svg");
 }
 
-@media (max-width: 375px) {
+@media (max-width: 329px) {
+  body {
+    overflow-y: scroll;
+  }
+
+  .background-footer {
+    bottom: 0;
+  }
+
+  .list-timer {
+    flex-direction: column;
+  }
+
+  .content {
+    width: 95%;
+  }
+}
+
+@media (min-width: 330px) and (max-width: 750px) {
   body {
     background-position-x: 50%;
     background-size: auto;
@@ -162,7 +180,7 @@ body {
   }
 
   .content {
-    width: 85%;
+    width: 95%;
     padding-top: 125px;
   }
 
