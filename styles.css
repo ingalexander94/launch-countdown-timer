@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap");
+
+:root {
+  --Grayish-blue: hsl(237, 18%, 59%);
+  --Soft-red: hsl(345, 95%, 68%);
+  --White: hsl(0, 0%, 100%);
+  --Dark-desaturated-blue: hsl(236, 21%, 26%);
+  --Very-dark-blue: hsl(235, 16%, 14%);
+  --Very-dark--mostly-black-blue: hsl(234, 17%, 12%);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100vh;
+  overflow: hidden;
+  font-family: "Red Hat Text";
+  font-size: 14px;
+  background-color: var(--Very-dark-blue);
+  background-image: url("./images/bg-stars.svg");
+  background-size: contain;
+}
+
+.background-footer {
+  background-image: url("./images/pattern-hills.svg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+  height: 100%;
+  position: relative;
+}
+
+.container {
+  position: absolute;
+  height: 100%;
+  width: 100vw;
+  text-transform: uppercase;
+}
+
+.content {
+  width: 44%;
+  margin: auto;
+  padding-top: 105px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.content h1 {
+  letter-spacing: 5px;
+  color: var(--White);
+  font-size: 23px;
+}
+
+.list-timer {
+  margin-top: 95px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.timer {
+  width: 150px;
+  height: 150px;
+}
+
+.timer p {
+  color: var(--Grayish-blue);
+  letter-spacing: 5px;
+  font-size: 12px;
+  margin-top: 20px;
+}
+
+.counter {
+  background: var(--Dark-desaturated-blue);
+  width: 120px;
+  border-radius: 8px;
+  height: 110px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow-x: hidden;
+  box-shadow: 0px 8px var(--Very-dark--mostly-black-blue);
+}
+
+.counter .shadow {
+  position: absolute;
+  height: 55px;
+  margin-top: -55px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  width: 120px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.counter .shadow::before {
+  content: "";
+  display: block;
+  height: 9px;
+  width: 9px;
+  border-radius: 50%;
+  bottom: -5px;
+  right: -5px;
+  position: absolute;
+  background: var(--Very-dark--mostly-black-blue);
+}
+
+.counter .shadow::after {
+  content: "";
+  display: block;
+  height: 9px;
+  width: 9px;
+  border-radius: 50%;
+  bottom: -5px;
+  left: -5px;
+  position: absolute;
+  background: var(--Very-dark--mostly-black-blue);
+}
+
+.counter h2 {
+  margin: 0;
+  font-size: 70px;
+  color: var(--Soft-red);
+}
+
+.icons {
+  margin-top: 150px;
+}
+
+.icon {
+  display: inline-block;
+  margin: 0 15px;
+  cursor: pointer;
+}
+
+.icon:hover svg path {
+  fill: var(--Soft-red);
+}
+
+.facebook {
+  background-image: url("./images/icon-facebook.svg");
+}
+
+.pinterest {
+  background-image: url("./images/icon-pinterest.svg");
+}
+
+.instagram {
+  background-image: url("./images/icon-instagram.svg");
+}
+
+@media (max-width: 375px) {
+  body {
+    background-position-x: 50%;
+    background-size: auto;
+  }
+  .background-footer {
+    background-position-x: 90%;
+    background-size: 220% 25%;
+  }
+
+  .content {
+    width: 85%;
+    padding-top: 125px;
+  }
+
+  .content h1 {
+    letter-spacing: 5px;
+    font-size: 20px;
+  }
+
+  .list-timer {
+    margin-top: 50px;
+  }
+
+  .timer {
+    width: 75px;
+    height: 75px;
+    margin: 0 5px;
+  }
+
+  .timer p {
+    font-size: 8px;
+    letter-spacing: 2px;
+    padding: 0 10px;
+  }
+
+  .counter {
+    width: 70px;
+    height: 70px;
+  }
+
+  .counter .shadow {
+    height: 35px;
+    margin-top: -35px;
+    width: 70px;
+  }
+
+  .counter h2 {
+    font-size: 35px;
+  }
+
+  .icons {
+    margin-top: 270px;
+  }
+}
